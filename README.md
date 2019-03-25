@@ -27,7 +27,7 @@ Clone the project to your machine, cd into the folder and run " npm i " to insta
 Live
 ---
 
-A live version will be created as the project is finished.
+A live version is available at http://doristef.me/semester4/noroff-finalca/ <-- WIP
 
 API
 ---
