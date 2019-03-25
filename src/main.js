@@ -12,7 +12,7 @@ import './styles/app.scss';
 import App from './components/app/app';
 import About from './components/about/about';
 import Contact from './components/contact/contact';
-import Homepage from './pages/homepage';
+import Homepage from './pages/homepage';''
 import CardSpecific from './pages/cardSpecific';
 
 const routes = (
