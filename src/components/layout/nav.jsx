@@ -22,7 +22,7 @@ export default class Nav extends React.Component {
                 </button>
 
                 <div className="[ collapse navbar-collapse ]" id="navbarNav">
-                    <ul className="[ navbar-nav ]">
+                    <ul className="[ navbar-nav ][ mr-auto ]">
                     <li className="[ nav-item ]">
                         <NavLink activeClassName="[ active ]" className="[ nav-link nav-link__orange ]" exact={false} to="/">Home</NavLink>
                     </li>
@@ -33,10 +33,11 @@ export default class Nav extends React.Component {
                         <NavLink activeClassName="[ active ]" className="[ nav-link nav-link__orange ]" to="/contact">Contact</NavLink>
                     </li>
                     </ul>
-                </div>
-                <span className="[ navbar-text ]">
+                    <span className="[ navbar-text ]">
                         <small className="[ text-muted ]">Logged in as ______</small>
-                </span>
+                    </span>
+                </div>
+
             </nav>
 
         )
