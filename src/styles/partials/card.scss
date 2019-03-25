@@ -1,0 +1,66 @@
+.btn {
+  &-orange {
+    background-color: $orange !important;
+    color: $white !important;
+    border-radius: 15px;
+    border: 0px;
+
+    &:hover {
+      background-color: darken($orange, 25%) !important;
+    }
+  }
+}
+
+.card {
+    border-radius: 8px;
+    position: relative;
+    background-color: lighten($gray, 7%);
+    border-top: 5px solid rgba(0,0,0,.125);
+    max-width: 1000px;
+
+    &-img {
+      max-width: 400px;
+      border-radius: 20px;
+      
+      &-specific {
+        margin: 0 10px;
+      }
+      &-top {
+      padding: 5px;
+      }
+    }
+    & img.card-img-top {
+        width: 100%;
+        opacity: 1;
+        transition: .8s ease;
+    }
+
+    & .overlay {
+        transition: .8s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    &-character {
+      border: 0px !important;
+      background: none !important;
+
+      &-hovering:hover  {
+        .card-title {
+         color: $color1;
+         transition: .8s ease;
+       }
+       .card-img-top  {
+         opacity: 0.2;
+       }
+       .overlay {
+         opacity: 1;
+       }
+     }
+    }
+
+}
