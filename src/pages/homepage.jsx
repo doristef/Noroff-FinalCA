@@ -51,12 +51,12 @@ export default class Homepage extends React.Component {
     createCards = () => {
         const app = this;
         let charactersArray;
-        app.state.cardsFilter ? charactersArray = app.state.characterCardsFiltered : charactersArray = app.state.charactersObj; // Check if user is searching
+        charactersArray = app.state.cardsFilter ? app.state.characterCardsFiltered : app.state.charactersObj; // Check if user is searching
 
         // Set cardMsg for loading or nothing found.
         if( charactersArray.length === 0 ){ 
             if( app.state.loaded ){
-                app.state.cardMsg = <h1> No card found. </h1>;
+                app.state.cardMsg = <h1> Card Not Found </h1>;
             }else{
                 app.state.cardMsg = <h1> Loading... </h1>;
             }
@@ -67,7 +67,7 @@ export default class Homepage extends React.Component {
 
         charactersArray.forEach((value, key) => {
             app.state.characterCards.push(
-                <CardComponent imageURL={value.imageUrl ? value.imageUrl : 'https://dummyimage.com/223x310/333/fff.png&text=' + value.name } // Check if image is available, if not Placeholder Image!
+                <CardComponent imageURL={value.imageUrl ? value.imageUrl : 'https://dummyimage.com/223x310/333/fff.png&text=' + value.name} // Check if image is available, if not Placeholder Image!
                                     name={value.name}
                                     rarity={value.rarity}
                                     id={value.id}

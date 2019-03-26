@@ -30,12 +30,8 @@ export default class Search extends React.Component {
                         <div className="[ input-group-prepend ]">
                             <div className="[ input-group-orange input-group-text ]">Search: </div>
                         </div>
-                        <input type="text"
-                            id="search"
-                            ref="searchTerm"
-                            onChange={app.handleCharacterSearchTerm}
-                            className="[ form-control ]"
-                            placeholder="Type in a character"
+                        <input type="text" id="search" ref="searchTerm"
+                            onChange={app.handleCharacterSearchTerm} className="[ form-control form-control-search ]" placeholder="Type in a character"
                         />
                         <div className="[ input-group-append ]">
                             <button type="button" className="[ btn btn-search ][ input-group-btn ]" onClick={this.clearForm} > reset </button>

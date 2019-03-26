@@ -14,17 +14,23 @@ import About from './components/about/about';
 import Contact from './components/contact/contact';
 import Homepage from './pages/homepage';''
 import CardSpecific from './pages/cardSpecific';
+import FormSuccess from './components/contact/formSuccess/thankYou'
+import NotFound from './components/404/notFound';
 
 const routes = (
     <HashRouter>
-        <Switch>
-            <App>
-                <Route path="/" exact component={Homepage} />
-                <Route path="/cardspecific/:id" exact component={CardSpecific} />
-                <Route path="/about" exact component={About} />
-                <Route path="/contact" exact component={Contact} />
-            </App>
-        </Switch>
+
+        <App>
+            <Switch>
+                <Route exact path="/" component={Homepage} />
+                <Route exact path="/cardspecific/:id" component={CardSpecific} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/contact" component={Contact} />
+                <Route exact path="/thankyou" component={FormSuccess} />
+                <Route path="*" component={NotFound}/>
+            </Switch>
+        </App>
+        
     </HashRouter>
 );
 
