@@ -2,13 +2,17 @@ textarea, select, input, button { outline-color: transparent;
     outline-style: none; }
 
 .form {
+    &-contact {
+        max-width: 800px;
+    }
+
     &-control {
         max-width: 500px;
         border-radius: 10px;
         border: 1px solid $lightGray;
 
         &-search {
-            border: 1px solid $orange !important;
+            border: 1px solid $color1 !important;
         }
     }
   
@@ -16,7 +20,7 @@ textarea, select, input, button { outline-color: transparent;
       min-width: 150px;
     }
     &-valid {
-        border-color: #28a745;
+        border-color: $color4;
         padding-right: calc(1.5em + .75rem);
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
         background-repeat: no-repeat;
@@ -24,7 +28,7 @@ textarea, select, input, button { outline-color: transparent;
         background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 
         &:focus {
-            border-color: #28a745 !important;
+            border-color: $color4 !important;
             box-shadow: 0 0 0 .2rem rgba(40,167,69,.25) !important;
         }
     }
@@ -32,7 +36,7 @@ textarea, select, input, button { outline-color: transparent;
         border-bottom-right-radius: 10px !important;
         border-top-right-radius: 10px !important;
         // From Bootstrap
-        border-color: $orange;
+        border-color: $color3;
         padding-right: calc(1.5em + .75rem);
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dc3545' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
         background-repeat: no-repeat;
@@ -40,19 +44,16 @@ textarea, select, input, button { outline-color: transparent;
         background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 
         &:focus {
-            border-color: $orange !important;
-            box-shadow: 0 0 0 .2rem rgba($orange,.25) !important;
+            border-color: $color3 !important;
+            box-shadow: 0 0 0 .2rem rgba($color3,.25) !important;
         }
     }
 }
 
 
   .input-group {
-    &-text {
-
-    }
-    &-orange {
-        background-color: $orange !important;
+    &-color1 {
+        background-color: $color1 !important;
         color: $white !important;
         border-radius: 15px;
         border: 0px;

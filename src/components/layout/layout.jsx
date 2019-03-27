@@ -7,13 +7,13 @@ export default class Layout extends React.Component {
     return (
       <div>
           <NavbarPage />
-        <div className="[ container ]">
-            <div className="[ row ]">
-              <div className="[ col-sm-12 ]">
-                {this.props.children}
-              </div>
+            <div className="[ container ]">
+                <div className="[ row ]">
+                  <div className="[ col-sm-12 ][ mt-3 ]">
+                    {this.props.children}
+                  </div>
+                </div>
             </div>
-        </div>
       </div>
     );
   }

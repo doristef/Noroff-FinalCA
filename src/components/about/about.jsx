@@ -1,5 +1,9 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons'
+
+
 export default class CardComponent extends React.Component {
     constructor () {
         super()
@@ -18,36 +22,30 @@ export default class CardComponent extends React.Component {
     
     render() {
         return (
-            <div className="[ col-sm-12 ] [ h-100 ][ my-3 ]">
-
-                <div className="[ row ]">
-                    <div className="[ col-sm-12 ][ my-2 ]">
-                        <div className="[ card card-showHide ][ my-2 p-0 ][ cursor-pointer ]" onClick={(evt) => this.toggleElement(0)}>
-                            <div className="[ card-body ]">
-                                <h3>
-                                    <i class="[ fas fa-chevron-circle-down ][ mr-3 ][ float-right ]"></i> 
-                                    <span> About the Card Game </span> 
-                                </h3>
-                                
-                                    {!this.state.isHidden[0] && <HiddenTextMain />}
-                            </div>
+                <div>
+                    <div className="[ card card-shadow card-showHide ][ my-2 p-0 ][ cursor-pointer ]" onClick={(evt) => this.toggleElement(0)}>
+                        <div className="[ card-body ]">
+                            <h3>
+                                <FontAwesomeIcon icon={faChevronCircleDown} size="lg" className="[ mr-3 ][ float-right ]" />
+                                <span> About the Card Game </span> 
+                            </h3>
                             
+                                {!this.state.isHidden[0] && <HiddenTextMain />}
                         </div>
+                        
+                    </div>
 
-                        <div className="[ card card-showHide ][ my-2 p-0 ][ cursor-pointer ]" onClick={(evt) => this.toggleElement(1)}>
-                            <div className="[ card-body ]">
-                                <h3>
-                                    <i class="[ fas fa-chevron-circle-down ][ mr-3 ][ float-right ]"></i> 
-                                    <span> Defeat Your Opponent </span> 
-                                </h3>
-                                
-                                    {!this.state.isHidden[1] && <HiddenTextDefeat />}
-                            </div>
+                    <div className="[ card card-shadow card-showHide ][ my-2 p-0 ][ cursor-pointer ]" onClick={(evt) => this.toggleElement(1)}>
+                        <div className="[ card-body ]">
+                            <h3>
+                                <FontAwesomeIcon icon={faChevronCircleDown} size="lg" className="[ mr-3 ][ float-right ]" />
+                                <span> Defeat Your Opponent </span> 
+                            </h3>
+                            
+                                {!this.state.isHidden[1] && <HiddenTextDefeat />}
                         </div>
                     </div>
                 </div>
-            </div>
-
         );
     }
     

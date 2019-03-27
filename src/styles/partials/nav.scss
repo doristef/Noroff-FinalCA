@@ -1,5 +1,11 @@
 .nav {
-    &-link__orange:hover {
-        color: $orange !important;
+    &-link-color:hover {
+        color: $color1 !important;
     }
 } 
+
+.navbar {
+    &-dark {
+        background: none !important;
+    }
+}

@@ -1,5 +1,11 @@
 //** GENERAL TAGS **//
 
+html {
+    background: #2c3e50;
+    background: linear-gradient(to top, #3498db 30%, #2c3e50 100%);
+    background-attachment: fixed;
+  }
+
 body {
     font-family: $bodyFont;
     font-weight: $bodyWeight !important;
@@ -8,6 +14,12 @@ body {
     color: $darkGray;
 }
 
+body, #app {
+    background: linear-gradient(to top, #3498db 30%, #2c3e50 100%);
+    background-attachment: fixed;
+  }
+
+ 
 //** HEADINGS **//
 
 @each $heading, $size in $headings {

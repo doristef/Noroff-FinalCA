@@ -50,10 +50,10 @@ export default class CardSpecific extends React.Component {
                             ></CardSpecificComponent>;
 
         return (
-            <div className="[ row ][ justify-content-center ]">
-                <div className="[ col-md-6 ][ mb-3 ]">
-                    <Link className="nav-link nav-link__orange" to="/">
-                    <button className="[ btn btn-lg btn-orange ]"><FontAwesomeIcon icon={faArrowAltCircleLeft} size="lg" /> Go back</button>
+            <div className="[ row ]">
+                <div className="[ col-sm-12 ][ mb-3 ]">
+                    <Link className="[ nav-link ]" to="/">
+                        <button className="[ btn btn-lg btn-specific ]"><FontAwesomeIcon icon={faArrowAltCircleLeft} size="lg" /> Go back</button>
                     </Link>
                 </div>
                 <div className="[ col-sm-12 ][ mb-3 ]">

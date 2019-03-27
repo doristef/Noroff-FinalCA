@@ -8,15 +8,22 @@ $headingFont : 'ZCOOL XiaoWei', serif;
 
 //** COLORS **//
 $black : #000000;
-$white : #ffffff;
+$white : #F7F0F5;
 
 $gray : #e9e9e9;
 $lightGray : #ced4da;
 $darkGray : #333;
 
-$orange : #FF6B4C;
-$color1 : #FF6B4C;
+$color1 : #78BC61;
 $color2 : #53585e;
+/*  FORM COLORS  */
+    // Invalid
+    $color3 : #d72e3d;
+    // Valid
+    $color4 : #28a745;
+
+$colorSpecific1: #1b2222;
+$colorSpecific2: #fcd9a9;
 
 //** FONT SIZES **//
 $headings: (

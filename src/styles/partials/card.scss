@@ -1,9 +1,13 @@
 .card {
-    border-radius: 8px;
+    border-radius: 12px;
     position: relative;
     background-color: lighten($gray, 7%);
     border-top: 5px solid rgba(0,0,0,.125);
     max-width: 1000px;
+    
+    &-shadow {
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
 
     &-img {
       max-width: 400px;
@@ -20,6 +24,8 @@
         width: 100%;
         opacity: 1;
         transition: .8s ease;
+        border-radius: 12px;
+        padding: 0;
     }
 
     & .overlay {
@@ -50,23 +56,51 @@
       float: none; 
       margin-bottom: 10px;
     }
+    &-contact {
+      max-width: 1000px;
+      border: 0;
+      border-radius: 8px;
+      position: relative;
+      background-color: lighten($gray, 7%);
+      /* To center the card */
+      margin: 0 auto;
+      float: none; 
+      margin-bottom: 10px;
+      &-img {
+          max-width: 350px;
+          border-radius: 8px;
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+          border: 0;
+      }
+    }
 
     &-character {
       border: 0px !important;
       background: none !important;
-
+      
       &-hovering:hover  {
         .card-title {
-         color: $color1;
+         color: $white !important;
          transition: .8s ease;
        }
        .card-img-top  {
-         opacity: 0.2;
+         opacity: 0.4;
        }
        .overlay {
          opacity: 1;
        }
      }
+    }
+
+    &-specific {
+      border: 0px !important;
+      background-color: $colorSpecific1;
+      color: $white !important;
+
+      &-title {
+        color: $colorSpecific2 !important;
+      }
     }
 
 }

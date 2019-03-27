@@ -32,7 +32,7 @@ export default class Search extends React.Component {
                 <label className="[ sr-only ]" for="search">Search in character card database</label>
                     <div className="[ input-group mb-2 ]">
                         <div className="[ input-group-prepend ]">
-                            <div className="[ input-group-orange input-group-text ]"><FontAwesomeIcon icon={faSearch} size="lg" /></div>
+                            <div className="[ input-group-color1 input-group-text ]"><FontAwesomeIcon icon={faSearch} size="lg" /></div>
                         </div>
                         <input type="text" id="search" ref="searchTerm"
                             onChange={app.handleCharacterSearchTerm} className="[ form-control form-control-search ]" placeholder="Type in a character"

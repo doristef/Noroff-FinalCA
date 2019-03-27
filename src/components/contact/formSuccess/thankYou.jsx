@@ -13,7 +13,7 @@ export default class FormSuccess extends React.Component {
                             <p class="[ card-text ]">
                                 Thank you for contacting us.
                             </p>
-                        <NavLink className="[ btn btn-orange btn-lg ][ m-3 ]" exact={true} to="/"> <i className="fas fa-home"></i> Home </NavLink>
+                        <NavLink className="[ btn btn-color1 btn-lg ][ m-3 ]" exact={true} to="/"> <i className="fas fa-home"></i> Home </NavLink>
                     </div>
                     </div>
                 </div>

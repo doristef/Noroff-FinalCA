@@ -1,27 +1,39 @@
 .btn {
-    &-orange {
-      background-color: $orange !important;
+    &-color1 {
+      background-color: $color1 !important;
       color: $white !important;
       border-radius: 15px;
       border: 0px;
   
       &:hover {
-        background-color: darken($orange, 25%) !important;
+        background-color: darken($color1, 25%) !important;
       }
     }
+
+    &-specific {
+      background-color: $colorSpecific1 !important;
+      color: $colorSpecific2 !important;
+      border-radius: 15px;
+      border: 0px;
   
+      &:hover {
+        background-color: darken($colorSpecific2, 25%) !important;
+        color: $colorSpecific1 !important;
+      }
+    }
+
     &-contact {
       min-width: 150px;
     }
     
     &-search {
-        background-color: $orange !important;
+        background-color: $color1 !important;
         color: $white !important;
         border-radius: 15px;
         border: 0px;
 
         &:hover {
-            background-color: darken($orange, 25%) !important;
+            background-color: darken($color1, 25%) !important;
         }
     }
   }
