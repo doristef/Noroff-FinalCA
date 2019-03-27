@@ -10,12 +10,12 @@ import {
 import './styles/app.scss';
 
 import App from './components/app/app';
-import About from './components/about/about';
-import Contact from './components/contact/contact';
+import About from './pages/about/about';
+import Contact from './pages/contact';
 import Homepage from './pages/homepage';''
 import CardSpecific from './pages/cardSpecific';
-import FormSuccess from './components/contact/formSuccess/thankYou'
-import NotFound from './components/404/notFound';
+import FormSuccess from './pages/formSuccess/thankYou'
+import NotFound from './pages/404/notFound';
 
 const routes = (
     <HashRouter>

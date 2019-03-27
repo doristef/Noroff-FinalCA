@@ -225,7 +225,7 @@ class ContactForm extends React.Component {
                                         </div>
                                     </div>
                                     
-                                    <div className="[ col-auto ][ my-3 ]">
+                                    <div className="[ col-xs-12 col-md-auto ][ my-3 ][ text-center text-md-left ]">
                                     <button type="submit" className="[ btn btn-color1 btn-contact ]">Submit</button>
                                     </div>
                                 </div>
