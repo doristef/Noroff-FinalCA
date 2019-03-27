@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import CardSpecificComponent from '../components/cardComponent/cardSpecificComponent'
 import CardLoading from '../components/cardComponent/cardLoading'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
+
+
 export default class CardSpecific extends React.Component {
 
     constructor(props){
@@ -49,7 +53,7 @@ export default class CardSpecific extends React.Component {
             <div className="[ row ][ justify-content-center ]">
                 <div className="[ col-md-6 ][ mb-3 ]">
                     <Link className="nav-link nav-link__orange" to="/">
-                    <button className="[ btn btn-lg btn-orange ]"><i class="fas fa-arrow-alt-circle-left"></i> Go back</button>
+                    <button className="[ btn btn-lg btn-orange ]"><FontAwesomeIcon icon={faArrowAltCircleLeft} size="lg" /> Go back</button>
                     </Link>
                 </div>
                 <div className="[ col-sm-12 ][ mb-3 ]">
