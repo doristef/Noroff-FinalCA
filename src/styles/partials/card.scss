@@ -93,18 +93,15 @@
       margin-bottom: 10px;
 
       &-img {
-          max-width: 350px;
-          border-radius: 8px;
-          border-bottom-right-radius: 0;
-          border-top-right-radius: 0;
+          max-width: 500px;
+          border-radius: 8px 0 0 8px ;
+
           border: 0;
           
-          @media screen and (max-width: $breakSmall) {
+          @media screen and (max-width: $breakMed) {
             width: 100%;
             float: none;
-            border-radius: 8px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
+            border-radius: 8px 8px 0 0;
           }
       }
     }

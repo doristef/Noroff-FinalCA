@@ -33,8 +33,7 @@ textarea, select, input, button { outline-color: transparent;
         }
     }
     &-invalid {
-        border-bottom-right-radius: 10px !important;
-        border-top-right-radius: 10px !important;
+        border-radius: 0 10px 10px 0 !important;
         // From Bootstrap
         border-color: $color3;
         padding-right: calc(1.5em + .75rem);
