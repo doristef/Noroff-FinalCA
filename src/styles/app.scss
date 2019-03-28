@@ -10,3 +10,9 @@
 .cursor-pointer{
     cursor: pointer;
   }
+
+  @media screen and (max-width: $breakSmall) {
+    .smallScreen-noPadding {
+      padding: 0;
+    }
+  }

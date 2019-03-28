@@ -94,7 +94,7 @@ export default class Homepage extends React.Component {
 
                     <div className="[ col-sm-12 ]">
                         <div className="[ row ][ mt-2 mb-5 ]">
-                            <div className="[ text-center ][ w-100 ]">{ app.state.cardMsg }</div>
+                            <div className="[ text-center ]">{ app.state.cardMsg }</div>
                             {app.state.characterCards}
                         </div>
                     </div>

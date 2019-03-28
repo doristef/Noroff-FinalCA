@@ -53,9 +53,13 @@ testUserDetails(userdetails) {
     if (userdetails.inputUsername !==  this.userObj.username || userdetails.inputPassword !== this.userObj.password) {
       if (userdetails.inputUsername !== this.userObj.username) {
         this.setState({ isUsername: true });
+      }else{ 
+        this.setState({ isUsername: false }); 
       }
       if (userdetails.inputPassword !== this.userObj.password) {
         this.setState({ isPassword: true });
+      }else{ 
+        this.setState({ isPassword: false }); 
       }
     } else {
       sessionStorage.setItem('AuthToken', 'sa6d456sd4a4ad6s');
@@ -68,9 +72,6 @@ testUserDetails(userdetails) {
 
 
   render() {
-    const app = this.state;
-    const { loggingIn } = this.props;
-    const { inputUsername, inputPassword, submitted } = this.state;
 
     return (
         <form className="[ form-contact ]" onSubmit={this.handleSubmit.bind(this)} noValidate> 
