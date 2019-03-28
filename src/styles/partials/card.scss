@@ -66,6 +66,18 @@
       margin-bottom: 10px;
     }
 
+/* CARD LOGIN*/
+&-login {
+  max-width: 500px;
+  border: 0;
+  border-radius: 8px;
+  position: relative;
+  background-color: lighten($gray, 7%);
+  /* To center the card */
+  margin: 0 auto;
+  float: none; 
+  margin-bottom: 10px;
+}
 /* CARD CONTACT */
     &-contact {
       max-width: 1000px;

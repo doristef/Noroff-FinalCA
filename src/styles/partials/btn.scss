@@ -9,6 +9,17 @@
         background-color: darken($color1, 25%) !important;
       }
     }
+    &-colorBg {
+      background-color: $colorBg1 !important;
+      color: $white !important;
+      border-radius: 15px;
+      border: 0px;
+  
+      &:hover {
+        background-color: darken($colorBg1, 25%) !important;
+      }
+    }
+
 
     &-specific {
       background-color: $colorSpecific1 !important;

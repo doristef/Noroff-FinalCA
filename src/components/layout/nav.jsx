@@ -10,7 +10,7 @@ export default class Nav extends React.Component {
         this.toggleNav = this.toggleNav.bind(this);
         this.state = {
             msg: '',
-            collapsed: true
+            collapsed: true,
         };
       }
       toggleNav() {
@@ -23,14 +23,15 @@ export default class Nav extends React.Component {
         const collapsed = this.state.collapsed;
         const navCollapse = collapsed ? '' : '[ show ]';
         const navToggler = collapsed ? '[ collapsed ]' : '';
+        const username = localStorage.getItem('Username') ? localStorage.getItem('Username').charAt(0).toUpperCase() + localStorage.getItem('Username').slice(1) : '';
 
         return (
 
             <nav className="[ navbar navbar-dark navbar-expand-lg ]">
-                <span className="[ navbar-brand ] [ mr-4 ]" href="#">
-                <FontAwesomeIcon icon={faHatWizard} size="lg" />
-                     Wizard Card Game
-                </span>
+                <NavLink className="[ navbar-brand ] [ mr-4 ]" exact={true} to="/">
+                    <FontAwesomeIcon icon={faHatWizard} size="lg" className="[ mr-2 ]" />
+                        Magic: Card Game
+                </NavLink>
                 
                 <button onClick={this.toggleNav} className={`[ navbar-toggler navbar-toggler-right ]${navToggler}`} type="button">
                     <span className="[ navbar-toggler-icon ]"></span>
@@ -49,7 +50,7 @@ export default class Nav extends React.Component {
                     </li>
                     </ul>
                     <span className="[ navbar-text ]">
-                        <small className="[ text-muted ]">Logged in as ______</small>
+                        <small className="[ text-muted ]">Logged in as { username ? username : '____' }</small>
                     </span>
                 </div>
 

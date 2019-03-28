@@ -202,7 +202,7 @@ class ContactForm extends React.Component {
                                         </div>
                                     </div>
         
-                                    <div className="[ col-sm-12 ][ my-1 ]">
+                                    <div className="[ col-12 ][ my-1 ]">
                                         <div className="[ input-group ]">
                                             <div className="[ input-group-prepend ]">
                                                 <div className="[ input-group-text ]"><FontAwesomeIcon icon={faCommentAlt} color={iconColor} size="lg"  /></div>
@@ -225,8 +225,8 @@ class ContactForm extends React.Component {
                                         </div>
                                     </div>
                                     
-                                    <div className="[ col-xs-12 col-md-auto ][ my-3 ][ text-center text-md-left ]">
-                                    <button type="submit" className="[ btn btn-color1 btn-contact ]">Submit</button>
+                                    <div className="[ col-12 ][ my-3 ][ text-center text-md-right ]">
+                                    <button type="submit" className="[ btn btn-color1 btn-contact ][ mr-md-5 ]">Submit</button>
                                     </div>
                                 </div>
                             </form>
