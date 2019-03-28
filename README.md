@@ -28,6 +28,10 @@ Live
 ---
 
 A live version is available at http://doristef.me/semester4/noroff-finalca/
+```
+## Usn: halldor
+## Pw: doristef
+```
 
 ...I also created a 404 page :) have a look -> http://doristef.me/semester4/noroff-finalca/#/1asd21
 
