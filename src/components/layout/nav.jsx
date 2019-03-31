@@ -1,13 +1,15 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
 
-export default class Nav extends React.Component {
+class Nav extends React.Component {
     constructor(props) {
         super(props);
         this.toggleNav = this.toggleNav.bind(this);
+        this.logout = this.logout.bind(this);
+
         this.state = {
             msg: '',
             collapsed: true,
@@ -19,11 +21,16 @@ export default class Nav extends React.Component {
         });
       }
 
+      logout() {
+          localStorage.removeItem('AuthToken');
+          return this.props.history.push('/login');
+      }
+
     render() {
         const collapsed = this.state.collapsed;
-        const navCollapse = collapsed ? '' : '[ show ]';
-        const navToggler = collapsed ? '[ collapsed ]' : '';
-        const username = localStorage.getItem('Username') ? localStorage.getItem('Username').charAt(0).toUpperCase() + localStorage.getItem('Username').slice(1) : '';
+        const navCollapse = !collapsed && '[ show ]';
+        const navToggler = collapsed && '[ collapsed ]';
+        const username = localStorage.getItem('Username') && localStorage.getItem('Username').charAt(0).toUpperCase() + localStorage.getItem('Username').slice(1);
 
         return (
 
@@ -50,7 +57,11 @@ export default class Nav extends React.Component {
                     </li>
                     </ul>
                     <span className="[ navbar-text ]">
-                        <small className="[ text-muted ]">Logged in as { username ? username : '____' }</small>
+                        
+                            { ( localStorage.getItem('AuthToken') ) &&
+                                   <small className="[ text-muted ]">Logged in as  {username} | <a className="[ nav-link-color ][ cursor-pointer ]" onClick={this.logout}>Logout?</a></small>
+                            }
+                             
                     </span>
                 </div>
 
@@ -59,3 +70,5 @@ export default class Nav extends React.Component {
         )
     }
 }
+
+export default withRouter(Nav);

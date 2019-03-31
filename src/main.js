@@ -26,23 +26,23 @@ const routes = (
             <Switch>
                 <Route exact path="/" 
                 render={() => 
-                ( sessionStorage.getItem('AuthToken') ? <Route  component={Homepage} /> : (<Redirect to="/login" />)
+                ( localStorage.getItem('AuthToken') ? <Route  component={Homepage} /> : (<Redirect to="/login" />)
                 )}  />
                 <Route exact path="/cardspecific/:id" 
                 render={() => 
-                ( sessionStorage.getItem('AuthToken') ? <Route component={CardSpecific} /> : (<Redirect to="/login" />)
+                ( localStorage.getItem('AuthToken') ? <Route component={CardSpecific} /> : (<Redirect to="/login" />)
                 )} />
                 <Route exact path="/about" 
                 render={() => 
-                ( sessionStorage.getItem('AuthToken') ? <Route component={About} /> : (<Redirect to="/login" />)
+                ( localStorage.getItem('AuthToken') ? <Route component={About} /> : (<Redirect to="/login" />)
                 )} />
                 <Route exact path="/contact" 
                 render={() => 
-                ( sessionStorage.getItem('AuthToken') ? <Route component={Contact} /> : (<Redirect to="/login" />)
+                ( localStorage.getItem('AuthToken') ? <Route component={Contact} /> : (<Redirect to="/login" />)
                 )} />
                 <Route exact path="/thankyou" 
                 render={() => 
-                ( sessionStorage.getItem('AuthToken') ? <Route component={FormSuccess} /> : (<Redirect to="/login" />)
+                ( localStorage.getItem('AuthToken') ? <Route component={FormSuccess} /> : (<Redirect to="/login" />)
                 )} />
                 <Route path="/login" component={Login}/>
                 <Route path="*" component={NotFound}/>

@@ -15,14 +15,14 @@ function validate(firstName, lastName, email, telephone, message) {
    
     /* Regex from doristef.me  */
     const telRegex = /^[+[0-9]{3}[\-\. ]{1}[0-9]{3}[\-\. ]{1}[0-9]{4}$/;
-    const nameRegex = /^[^±!@£$%^&*_+§¡€#¢§¶•ªº«\\/<>?:;|=.,0-9]{1,20}$/; // Only check for characters that are not allowed
+    const nameRegex = /^[^±!@£$%^&*_+§¡€#¢§¶•ªº«\\/<>?:;|=.,0-9]{2,}$/; // Only check for characters that are not allowed
 
     const errors = [];
         
-        (firstName.value.length < 2 || !nameRegex.test( firstName.value )) ? 
+        (!nameRegex.test( firstName.value )) ? 
             (errors.push("First name should be min. 2 char / only characters"), firstName.classList.add('form-invalid')) : firstName.classList.remove('form-invalid');
 
-        (lastName.value.length < 2 || !nameRegex.test( lastName.value )) ? 
+        (!nameRegex.test( lastName.value )) ? 
             (errors.push("Last name should be min. 2 char / only characters"), lastName.classList.add('form-invalid')) : lastName.classList.remove('form-invalid');
         
         !emailRegex.test( email.value ) ? 
@@ -44,19 +44,18 @@ class ContactForm extends React.Component {
     this.state = {
         errors: []
     };
-
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
 
   handleSubmit = e => {
     e.preventDefault();
 
     // Set all dom elements
-    const firstName = ReactDOM.findDOMNode(this._firstNameInput);
-    const lastName = ReactDOM.findDOMNode(this._lastNameInput);
-    const email = ReactDOM.findDOMNode(this._emailInput);
-    const telephone = ReactDOM.findDOMNode(this._telephoneInput);
-    const message = ReactDOM.findDOMNode(this._messageInput);
+    const firstName = ReactDOM.findDOMNode(this._inputFirstName);
+    const lastName = ReactDOM.findDOMNode(this._inputLastName);
+    const email = ReactDOM.findDOMNode(this._inputEmail);
+    const telephone = ReactDOM.findDOMNode(this._inputTel);
+    const message = ReactDOM.findDOMNode(this._inputMessage);
 
     // Check for errors
     const errors = validate(firstName, lastName, email, telephone, message);
@@ -97,13 +96,11 @@ class ContactForm extends React.Component {
                 <label className="[ sr-only ]" htmlFor="inputFirstName">First Name</label>
 
                 <input type="text" 
-                            className={`[ form-control ] `}            
+                            className="[ form-control ]"            
                             id="inputFirstName"
                             placeholder="First name"
-                            ref={firstNameInput => (this._firstNameInput = firstNameInput)}
+                            ref={inputFirstName => (this._inputFirstName = inputFirstName)}
                 />
-                    
-
                 </div>
             </div>
 
@@ -115,12 +112,11 @@ class ContactForm extends React.Component {
                 
                     <label className="[ sr-only ]" htmlFor="inputLastName">Last Name</label>
                     <input type="text" 
-                                className={`[ form-control ]`}
+                                className="[ form-control ]"
                                 id="inputLastName"
                                 placeholder="Last name" 
-                                ref={lastNameInput => (this._lastNameInput = lastNameInput)}
+                                ref={inputLastName => (this._inputLastName = inputLastName)}
                     /> 
-
                 </div>
             </div>
                                             
@@ -132,13 +128,11 @@ class ContactForm extends React.Component {
 
                 <label className="[ sr-only ]" htmlFor="inputEmail">Email Address</label>
                 <input type="email" 
-                            className={`[ form-control ]`}
+                            className="[ form-control ]"
                             id="inputEmail"
                             placeholder="Email Address" 
-                            ref={emailInput => (this._emailInput = emailInput)}
+                            ref={inputEmail => (this._inputEmail = inputEmail)}
                 />
-
-
             </div>
 
             </div>
@@ -150,12 +144,11 @@ class ContactForm extends React.Component {
                     </div>
                     <label className="[ sr-only ]" htmlFor="inputTel">Telephone Number</label>
                     <input type="tel" 
-                                className={`[ form-control ]`} 
-                                id="inputTel"
-                                placeholder="xxx xxx xxxx" 
-                                ref={telephoneInput => (this._telephoneInput = telephoneInput)}
+                            className="[ form-control ]" 
+                            id="inputTel"
+                            placeholder="xxx xxx xxxx" 
+                            ref={inputTel => (this._inputTel = inputTel)}
                     /> 
-
                 </div>
             </div>
 
@@ -166,12 +159,11 @@ class ContactForm extends React.Component {
                     </div>
                     <label className="[ sr-only ]" htmlFor="inputMessage">Message</label>
                     <textarea  
-                                className={`[ form-control ]`}
-                                id="inputMessage"
-                                placeholder="Message"                                                 
-                                ref={messageInput => (this._messageInput = messageInput)}
+                            className="[ form-control ]"
+                            id="inputMessage"
+                            placeholder="Message"                                                 
+                            ref={inputMessage => (this._inputMessage = inputMessage)}
                     />
-                        
                 </div>
             </div>
             

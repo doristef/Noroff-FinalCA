@@ -18,7 +18,6 @@ class LoginAuth extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
 }
 
 getLoginDetails() {
@@ -37,7 +36,6 @@ componentDidMount() {
 handleChange(e) {
     const { id, value } = e.target;
     this.setState({ [id]: value });
-    console.log(this.state);
 }
 
 handleSubmit(e) {
@@ -51,20 +49,15 @@ handleSubmit(e) {
 
 testUserDetails(userdetails) {
     if (userdetails.inputUsername !==  this.userObj.username || userdetails.inputPassword !== this.userObj.password) {
-      if (userdetails.inputUsername !== this.userObj.username) {
-        this.setState({ isUsername: true });
-      }else{ 
-        this.setState({ isUsername: false }); 
-      }
-      if (userdetails.inputPassword !== this.userObj.password) {
-        this.setState({ isPassword: true });
-      }else{ 
-        this.setState({ isPassword: false }); 
-      }
+      
+      userdetails.inputUsername !== this.userObj.username ? this.setState({ isUsername: true }) : this.setState({ isUsername: false }); 
+      userdetails.inputPassword !== this.userObj.password ? this.setState({ isPassword: true }) : this.setState({ isPassword: false }); 
+
     } else {
-      sessionStorage.setItem('AuthToken', 'sa6d456sd4a4ad6s');
-        this.props.history.push('/'); // If the form is valid and submitted, redirect to website
-        this.setState({ isUsername: false, isPassword: false });
+
+      localStorage.setItem('AuthToken', 'sa6d456sd4a4ad6s');
+      this.props.history.push('/'); // If the form is valid and submitted, redirect to website
+
     }
 }
 
@@ -86,16 +79,12 @@ testUserDetails(userdetails) {
               
                   <label className="[ sr-only ]" htmlFor="inputUsername">First Name</label>
                     <input type="text"
-                          className="[ form-control ] "
+                          className={`[ form-control ] 
+                                      [ ${( this.state.isUsername && this.state.submitted ) && '[ text-muted form-invalid ]'} ]`}  
                           id="inputUsername"
                           placeholder="Type Username"
                           onChange={this.handleChange} 
-                          noValidate // Disable HTML5 Validation
                     />
-                    { (() => { if ( this.state.isUsername && this.state.submitted ) {
-                              return <span className="[ text-muted form-invalid ]"></span>
-                            }})()
-                     }
                 </div>
 
             </div>
@@ -110,15 +99,12 @@ testUserDetails(userdetails) {
               
                   <label className="[ sr-only ]" htmlFor="inputPassword">Password</label>
                     <input type="password" 
-                          className="[ form-control ] "
+                          className={`[ form-control ] 
+                                      [ ${( this.state.isPassword && this.state.submitted ) && '[ text-muted form-invalid ]'} ]`}  
                           id="inputPassword"
                           placeholder="Type Password"
                           onChange={this.handleChange} 
-                          noValidate // Disable HTML5 Validation
-                    />
-                    { (() => { if ( this.state.isPassword && this.state.submitted ) {
-                              return <span className="[ text-muted form-invalid ]"></span>
-                    } })() }
+                    />   
                 </div>
 
             </div>
