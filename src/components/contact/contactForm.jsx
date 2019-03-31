@@ -20,19 +20,19 @@ function validate(firstName, lastName, email, telephone, message) {
     const errors = [];
         
         (!nameRegex.test( firstName.value )) ? 
-            (errors.push("First name should be min. 2 char / only characters"), firstName.classList.add('form-invalid')) : firstName.classList.remove('form-invalid');
+            (errors.push("First name should be min. 2 characters, only alphabets"), firstName.classList.add('form-invalid')) : firstName.classList.remove('form-invalid');
 
         (!nameRegex.test( lastName.value )) ? 
-            (errors.push("Last name should be min. 2 char / only characters"), lastName.classList.add('form-invalid')) : lastName.classList.remove('form-invalid');
+            (errors.push("Last name should be min. 2 characters, only alphabets"), lastName.classList.add('form-invalid')) : lastName.classList.remove('form-invalid');
         
         !emailRegex.test( email.value ) ? 
             (errors.push("Email format: xx@xx.xx"), email.classList.add('form-invalid')) : email.classList.remove('form-invalid');
 
         !telRegex.test( telephone.value ) ? 
-            (errors.push("Phone number format: xxx xxx xxxx"), telephone.classList.add('form-invalid')) : telephone.classList.remove('form-invalid');
+            (errors.push("Telephone format: xxx xxx xxxx"), telephone.classList.add('form-invalid')) : telephone.classList.remove('form-invalid');
 
         message.value.length < 25 ? 
-            (errors.push("Message should be min. 25 char"), message.classList.add('form-invalid')) : message.classList.remove('form-invalid');
+            (errors.push("Message should be min. 25 characters"), message.classList.add('form-invalid')) : message.classList.remove('form-invalid');
 
     return errors;
 }
