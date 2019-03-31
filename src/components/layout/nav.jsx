@@ -59,7 +59,7 @@ class Nav extends React.Component {
                     <span className="[ navbar-text ]">
                         
                             { ( localStorage.getItem('AuthToken') ) &&
-                                   <small className="[ text-muted ]">Logged in as  {username} | <a className="[ nav-link-color ][ cursor-pointer ]" onClick={this.logout}>Logout?</a></small>
+                                   <small className="[ text-muted ]">Logged in as  {username} | <a className="[ nav-link-color ][ cursor-pointer ]" onClick={() => {this.logout(); this.toggleNav();} }>Logout?</a></small>
                             }
                              
                     </span>

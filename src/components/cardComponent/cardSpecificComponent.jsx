@@ -5,11 +5,11 @@ export default class CardSpecificComponent extends React.Component {
     render() {
         return (
                 <div className="[ row ]">
-                    <div className="[ col-xs-12 col-sm-4 ][ mt-2 ]">
+                    <div className="[ col-xs-12 col-md-4 ][ mt-2 ]">
                         <img src={this.props.imageURL} className="[ card-img card-shadow card-img-specific ]"  alt={this.props.name} />
                     </div>
 
-                    <div className="[ col-xs-12 col-sm-6 ][ mt-2 ]">
+                    <div className="[ col-xs-12 col-md-6 ][ mt-2 ]">
                         <div className="[ card card-shadow card-specific ]">
                             <div className="[ card-body ]">
                             <h1 className="[ card-title card-specific-title ][ m-3 ]"> {this.props.name ? this.props.name : 'No name to show.'}</h1>
