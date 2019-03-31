@@ -46,7 +46,7 @@ module.exports = {
 
     historyApiFallback: true,
 
-    //allow site to be served via ip/machine name for debugging
+    // allow site to be served via ip/machine name for debugging
     disableHostCheck: true
   },
 

@@ -18,6 +18,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.[hash].min.js',
+    // the output bundle
   },
 
   resolve: {
