@@ -1,10 +1,12 @@
 {
-  "name": "rick-morty-api-cards",
+  "name": "card-game-api",
   "private": false,
-  "version": "0.1.0",
-  "description": "Rick & Morty API - Character Cards",
+  "version": "1.0",
+  "description": "Magic Card Game - API",
   "keywords": [
-    "react-project"
+    "react-project",
+    "api",
+    "card-game"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
@@ -39,7 +41,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/doristef/Noroff-ReactApp.git"
+    "url": "git://github.com/doristef/Noroff-FinalCA"
   },
   "author": "Halldor Valur Stefansson",
   "license": "MIT",
