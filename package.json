@@ -1,7 +1,7 @@
 {
   "name": "card-game-api",
   "private": false,
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Magic Card Game - API",
   "keywords": [
     "react-project",
